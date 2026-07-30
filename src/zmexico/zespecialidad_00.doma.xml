@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DOMA" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD01V>
+    <DOMNAME>ZESPECIALIDAD_00</DOMNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000002</LENG>
+    <OUTPUTLEN>000002</OUTPUTLEN>
+    <VALEXI>X</VALEXI>
+    <DDTEXT>Especialidad de Tacos</DDTEXT>
+    <DOMMASTER>E</DOMMASTER>
+   </DD01V>
+   <DD07V_TAB>
+    <DD07V>
+     <DOMNAME>ZESPECIALIDAD_00</DOMNAME>
+     <VALPOS>0001</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>PA</DOMVALUE_L>
+     <DDTEXT>Pastor</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZESPECIALIDAD_00</DOMNAME>
+     <VALPOS>0002</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>BA</DOMVALUE_L>
+     <DDTEXT>Barbacoa</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZESPECIALIDAD_00</DOMNAME>
+     <VALPOS>0003</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>CO</DOMVALUE_L>
+     <DDTEXT>Cochinita</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZESPECIALIDAD_00</DOMNAME>
+     <VALPOS>0004</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>CA</DOMVALUE_L>
+     <DDTEXT>Carnitas</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZESPECIALIDAD_00</DOMNAME>
+     <VALPOS>0005</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>SU</DOMVALUE_L>
+     <DDTEXT>Suadero</DDTEXT>
+    </DD07V>
+   </DD07V_TAB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
