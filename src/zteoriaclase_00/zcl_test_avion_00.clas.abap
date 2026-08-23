@@ -12,7 +12,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_test_avion_00 IMPLEMENTATION.
+CLASS ZCL_TEST_AVION_00 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -32,5 +33,4 @@ CLASS zcl_test_avion_00 IMPLEMENTATION.
     out->write( |El avión tiene { lo_avion->asientos_ocu } asientos ocupados| ).
 
   ENDMETHOD.
-
 ENDCLASS.

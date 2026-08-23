@@ -1,0 +1,13 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_EMBARAZO_00'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_EMBARAZO_00'
+  }
+}
+define service ZUI_EMBARAZO_00_O4
+  provider contracts odata_v4_ui {
+  expose ZC_EMBARAZO_00   as Seguimientos;
+  expose ZI_NivelRiesgoVH as NivelesRiesgo;
+}

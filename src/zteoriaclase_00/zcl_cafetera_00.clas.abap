@@ -19,11 +19,13 @@ ENDCLASS.
 
 
 
-CLASS zcl_cafetera_00 IMPLEMENTATION.
+CLASS ZCL_CAFETERA_00 IMPLEMENTATION.
+
 
   METHOD constructor.
     agua_restante = i_agua.
   ENDMETHOD.
+
 
   METHOD preparar_cafe.
     IF agua_restante >= 250.
@@ -31,8 +33,8 @@ CLASS zcl_cafetera_00 IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
+
   METHOD consultar_agua.
     rv_agua = agua_restante.
   ENDMETHOD.
-
 ENDCLASS.

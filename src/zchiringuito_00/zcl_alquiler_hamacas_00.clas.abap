@@ -15,7 +15,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_alquiler_hamacas_00 IMPLEMENTATION.
+CLASS ZCL_ALQUILER_HAMACAS_00 IMPLEMENTATION.
+
+
   METHOD calcular_comision.
 *    rv_comision = recaudacion * '0.2'.
 
@@ -23,8 +25,8 @@ CLASS zcl_alquiler_hamacas_00 IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD reservar_sombrilla.
 
   ENDMETHOD.
-
 ENDCLASS.

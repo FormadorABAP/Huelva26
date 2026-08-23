@@ -12,7 +12,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_test_instrumentos_00 IMPLEMENTATION.
+CLASS ZCL_TEST_INSTRUMENTOS_00 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 *  Crear una guitarra marca 'Yamaha' con 6 cuerdas.

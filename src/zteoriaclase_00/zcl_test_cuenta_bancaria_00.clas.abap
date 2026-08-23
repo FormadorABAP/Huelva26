@@ -9,7 +9,9 @@ CLASS zcl_test_cuenta_bancaria_00 DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_test_cuenta_bancaria_00 IMPLEMENTATION.
+
+CLASS ZCL_TEST_CUENTA_BANCARIA_00 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -27,5 +29,4 @@ CLASS zcl_test_cuenta_bancaria_00 IMPLEMENTATION.
     out->write( |Operaciones internas: { lo_cuenta->consultar_operaciones( ) }| ).
 
   ENDMETHOD.
-
 ENDCLASS.

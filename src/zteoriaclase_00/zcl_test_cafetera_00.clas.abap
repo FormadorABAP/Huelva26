@@ -10,7 +10,10 @@ CLASS zcl_test_cafetera_00 DEFINITION
   PRIVATE SECTION.
 ENDCLASS.
 
-CLASS zcl_test_cafetera_00 IMPLEMENTATION.
+
+
+CLASS ZCL_TEST_CAFETERA_00 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 

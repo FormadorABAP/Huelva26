@@ -12,7 +12,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_test_mascota_00 IMPLEMENTATION.
+CLASS ZCL_TEST_MASCOTA_00 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 

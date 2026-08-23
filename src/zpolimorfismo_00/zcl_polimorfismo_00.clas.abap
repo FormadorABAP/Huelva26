@@ -15,14 +15,16 @@ ENDCLASS.
 
 
 
-CLASS zcl_polimorfismo_00 IMPLEMENTATION.
+CLASS ZCL_POLIMORFISMO_00 IMPLEMENTATION.
+
+
   METHOD saludar.
     rv_saludo = 'Hola, soy el padre'.
     nombre = 'Juan'.
   ENDMETHOD.
 
+
   METHOD poner_nombre.
     nombre = 'David'.
   ENDMETHOD.
-
 ENDCLASS.

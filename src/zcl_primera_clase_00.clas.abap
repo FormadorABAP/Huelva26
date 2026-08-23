@@ -13,7 +13,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_primera_clase_00 IMPLEMENTATION.
+CLASS ZCL_PRIMERA_CLASE_00 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 

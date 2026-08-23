@@ -23,11 +23,14 @@ ENDCLASS.
 
 
 
-CLASS zcl_deposito_00 IMPLEMENTATION.
+CLASS ZCL_DEPOSITO_00 IMPLEMENTATION.
+
+
   METHOD constructor.
     capacidad = i_capacidad.
     litros = 0.
   ENDMETHOD.
+
 
   METHOD repostar_deposito.
     IF litros + i_litros <= capacidad.
@@ -36,6 +39,7 @@ CLASS zcl_deposito_00 IMPLEMENTATION.
       litros = capacidad.
     ENDIF.
   ENDMETHOD.
+
 
   METHOD despachar_combustible.
     IF i_litros > litros.
@@ -46,8 +50,8 @@ CLASS zcl_deposito_00 IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
+
   METHOD consultar_nivel.
     rv_nivel = litros.
   ENDMETHOD.
-
 ENDCLASS.

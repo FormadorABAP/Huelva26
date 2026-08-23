@@ -12,7 +12,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_test_caja_fuerte_00 IMPLEMENTATION.
+CLASS ZCL_TEST_CAJA_FUERTE_00 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 

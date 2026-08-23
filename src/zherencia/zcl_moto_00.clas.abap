@@ -17,7 +17,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_moto_00 IMPLEMENTATION.
+CLASS ZCL_MOTO_00 IMPLEMENTATION.
+
+
   METHOD caballito.
     IF kilometraje > 0.
       rv_accion = abap_true.
@@ -25,5 +27,4 @@ CLASS zcl_moto_00 IMPLEMENTATION.
       rv_accion = abap_false.
     ENDIF.
   ENDMETHOD.
-
 ENDCLASS.

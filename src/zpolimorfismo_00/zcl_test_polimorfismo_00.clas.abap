@@ -12,7 +12,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_test_polimorfismo_00 IMPLEMENTATION.
+CLASS ZCL_TEST_POLIMORFISMO_00 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 

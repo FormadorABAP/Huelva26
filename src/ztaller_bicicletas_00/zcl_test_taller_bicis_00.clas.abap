@@ -10,7 +10,10 @@ CLASS zcl_test_taller_bicis_00 DEFINITION
   PRIVATE SECTION.
 ENDCLASS.
 
-CLASS zcl_test_taller_bicis_00 IMPLEMENTATION.
+
+
+CLASS ZCL_TEST_TALLER_BICIS_00 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -60,5 +63,4 @@ CLASS zcl_test_taller_bicis_00 IMPLEMENTATION.
 *    ENDIF.
 
   ENDMETHOD.
-
 ENDCLASS.

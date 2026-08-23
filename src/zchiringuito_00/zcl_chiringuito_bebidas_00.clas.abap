@@ -16,7 +16,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_chiringuito_bebidas_00 IMPLEMENTATION.
+CLASS ZCL_CHIRINGUITO_BEBIDAS_00 IMPLEMENTATION.
+
+
   METHOD vender_2.
     IF i_dinero >= '1.50'.
       vender( i_dinero ).
@@ -26,8 +28,8 @@ CLASS zcl_chiringuito_bebidas_00 IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
+
   METHOD anadir_hielo.
     rv_hielo = 'Bebida con hielo'.
   ENDMETHOD.
-
 ENDCLASS.

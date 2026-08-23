@@ -22,19 +22,26 @@ CLASS zcl_vehiculo_00 DEFINITION
 
 ENDCLASS.
 
-CLASS zcl_vehiculo_00 IMPLEMENTATION.
+
+
+CLASS ZCL_VEHICULO_00 IMPLEMENTATION.
+
+
   METHOD constructor.
     matricula = i_matricula.
     kilometraje = 0.
   ENDMETHOD.
 
+
   METHOD get_contador.
     o_contador = kilometraje.
   ENDMETHOD.
 
+
   METHOD viajar.
     kilometraje += i_kilometros.
   ENDMETHOD.
+
 
   METHOD pasar_revision.
     rv_revision = abap_false.
@@ -42,5 +49,4 @@ CLASS zcl_vehiculo_00 IMPLEMENTATION.
       rv_revision = abap_true.
     ENDIF.
   ENDMETHOD.
-
 ENDCLASS.

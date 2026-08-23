@@ -52,7 +52,8 @@ CLASS zcl_jugar_con_bd_00 IMPLEMENTATION.
     ls_instrumento-familia        = 'CU'.
     APPEND ls_instrumento TO lt_instrumento.
 
-    DELETE zinstrumentos_00 FROM TABLE @lt_instrumento.
+    DELETE zinstrumentos_00 " FROM TABLE @lt_instrumento.
+        WHERE PRECIO < 500.
 
     IF sy-subrc = 0.
       out->write( 'Instrumentos insertados' ).

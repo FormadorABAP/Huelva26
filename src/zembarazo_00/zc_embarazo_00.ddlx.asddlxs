@@ -1,0 +1,250 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'IdSeguimiento'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'IdSeguimiento'
+annotate view ZC_EMBARAZO_00 with
+{
+  @UI.facet: [ {
+    label: 'General Information',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @EndUserText.label: 'IdSeguimiento'
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'IdSeguimiento'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    label: 'IdSeguimiento'
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  IdSeguimiento;
+
+  @EndUserText.label: 'Paciente F'
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'Paciente D'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 ,
+    label: 'Paciente G'
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  NombrePaciente;
+
+  @EndUserText.label: 'FechaUltimaRegla'
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'FechaUltimaRegla'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 ,
+    label: 'FechaUltimaRegla'
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  FechaUltimaRegla;
+
+  @EndUserText.label: 'FechaProbableParto'
+  @UI.identification: [ {
+    position: 40 ,
+    label: 'FechaProbableParto'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 ,
+    label: 'FechaProbableParto'
+  } ]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+  FechaProbableParto;
+
+  @EndUserText.label: 'SemanaGestacion'
+  @UI.identification: [ {
+    position: 50 ,
+    label: 'SemanaGestacion'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 ,
+    label: 'SemanaGestacion'
+  } ]
+  @UI.selectionField: [ {
+    position: 50
+  } ]
+  SemanaGestacion;
+
+  @EndUserText.label: 'GrupoSanguineo'
+  @UI.identification: [ {
+    position: 60 ,
+    label: 'GrupoSanguineo'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 ,
+    label: 'GrupoSanguineo'
+  } ]
+  @UI.selectionField: [ {
+    position: 60
+  } ]
+  GrupoSanguineo;
+
+  @EndUserText.label: 'FactorRh'
+  @UI.identification: [ {
+    position: 70 ,
+    label: 'FactorRh'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 ,
+    label: 'FactorRh'
+  } ]
+  @UI.selectionField: [ {
+    position: 70
+  } ]
+  FactorRh;
+
+  @EndUserText.label: 'NivelRiesgo'
+  @UI.identification: [ {
+    position: 80 ,
+    label: 'NivelRiesgo'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 ,
+    label: 'NivelRiesgo'
+  } ]
+  @UI.selectionField: [ {
+    position: 80
+  } ]
+  @Consumption.valueHelpDefinition: [
+  {
+    entity: {
+      name: 'ZI_NivelRiesgoVH',
+      element: 'RiskLevel'
+    },
+    useForValidation: true
+  }
+  ]
+  NivelRiesgo;
+
+  @EndUserText.label: 'Estado'
+  @UI.identification: [ {
+    position: 90 ,
+    label: 'Estado'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 ,
+    label: 'Estado'
+  } ]
+  @UI.selectionField: [ {
+    position: 90
+  } ]
+  Estado;
+
+  @EndUserText.label: 'PesoActual'
+  @UI.identification: [ {
+    position: 100 ,
+    label: 'PesoActual'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 ,
+    label: 'PesoActual'
+  } ]
+  @UI.selectionField: [ {
+    position: 100
+  } ]
+  PesoActual;
+
+  @EndUserText.label: 'UnidadPeso'
+  @UI.identification: [ {
+    position: 110 ,
+    label: 'UnidadPeso'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 ,
+    label: 'UnidadPeso'
+  } ]
+  @UI.selectionField: [ {
+    position: 110
+  } ]
+  UnidadPeso;
+
+  @EndUserText.label: 'ProximaRevision'
+  @UI.identification: [ {
+    position: 120 ,
+    label: 'ProximaRevision'
+  } ]
+  @UI.lineItem: [ {
+    position: 120 ,
+    label: 'ProximaRevision'
+  } ]
+  @UI.selectionField: [ {
+    position: 120
+  } ]
+  ProximaRevision;
+
+  @EndUserText.label: 'Observaciones'
+  @UI.identification: [ {
+    position: 130 ,
+    label: 'Observaciones'
+  } ]
+  @UI.lineItem: [ {
+    position: 130 ,
+    label: 'Observaciones'
+  } ]
+  @UI.selectionField: [ {
+    position: 130
+  } ]
+  Observaciones;
+
+  @UI.identification: [ {
+    position: 140
+  } ]
+  @UI.lineItem: [ {
+    position: 140
+  } ]
+  @UI.selectionField: [ {
+    position: 140
+  } ]
+  @UI.hidden: true
+  CreatedBy;
+
+  @UI.identification: [ {
+    position: 150
+  } ]
+  @UI.lineItem: [ {
+    position: 150
+  } ]
+  @UI.selectionField: [ {
+    position: 150
+  } ]
+  LastChangedBy;
+
+  @UI.identification: [ {
+    position: 160
+  } ]
+  @UI.lineItem: [ {
+    position: 160
+  } ]
+  @UI.selectionField: [ {
+    position: 160
+  } ]
+  LocalLastChangedAt;
+
+  @UI.identification: [ {
+    position: 170
+  } ]
+  @UI.lineItem: [ {
+    position: 170
+  } ]
+  @UI.selectionField: [ {
+    position: 170
+  } ]
+  LastChangedAt;
+}

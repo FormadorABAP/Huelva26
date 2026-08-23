@@ -30,7 +30,9 @@ CLASS zcl_cuenta_bancaria_00 DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_cuenta_bancaria_00 IMPLEMENTATION.
+
+CLASS ZCL_CUENTA_BANCARIA_00 IMPLEMENTATION.
+
 
   METHOD constructor.
     titular = iv_titular.
@@ -38,18 +40,22 @@ CLASS zcl_cuenta_bancaria_00 IMPLEMENTATION.
     numero_operaciones_internas = 0.
   ENDMETHOD.
 
+
   METHOD ingresar.
     saldo = saldo + iv_importe.
     registrar_operacion_interna( ).
   ENDMETHOD.
 
+
   METHOD consultar_saldo.
     rv_saldo = saldo.
   ENDMETHOD.
 
+
   METHOD consultar_operaciones.
     rv_operaciones = numero_operaciones_internas.
   ENDMETHOD.
+
 
   METHOD registrar_operacion_interna.
     numero_operaciones_internas = numero_operaciones_internas + 1.
@@ -57,5 +63,4 @@ CLASS zcl_cuenta_bancaria_00 IMPLEMENTATION.
       "" aquí, por ejemplo, se lanzaría la auditoría automática
     ENDIF.
   ENDMETHOD.
-
 ENDCLASS.

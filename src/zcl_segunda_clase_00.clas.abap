@@ -11,11 +11,11 @@ ENDCLASS.
 
 
 
-CLASS zcl_segunda_clase_00 IMPLEMENTATION.
+CLASS ZCL_SEGUNDA_CLASE_00 IMPLEMENTATION.
+
 
   METHOD saludar.
     DATA lv_saludo TYPE string.
     lv_saludo = 'Hola'.
   ENDMETHOD.
-
 ENDCLASS.

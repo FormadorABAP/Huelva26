@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_RESERVA_00'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_RESERVA_00'
+  }
+}
+define service ZUI_RESERVA_00_O4 provider contracts odata_v4_ui {
+  expose ZC_RESERVA_00;
+}
