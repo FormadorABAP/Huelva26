@@ -1,0 +1,196 @@
+@Metadata.layer: #CORE
+
+annotate entity ZC_MARIO_BROS_00 with
+{
+
+  @UI.facet: [
+    {
+      id: 'DatosGenerales',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Datos del personaje',
+      position: 10
+    }
+  ]
+
+  @UI.lineItem: [
+    {
+      position: 10,
+      label: 'ID Personaje'
+    }
+  ]
+  @UI.identification: [
+    {
+      position: 10,
+      label: 'ID Personaje'
+    }
+  ]
+  IdPersonaje;
+
+
+  @UI.lineItem: [
+    {
+      position: 20,
+      label: 'Nombre'
+    }
+  ]
+  @UI.identification: [
+    {
+      position: 20,
+      label: 'Nombre'
+    }
+  ]
+  Nombre;
+
+
+  @UI.lineItem: [
+    {
+      position: 30,
+      label: 'Tipo'
+    }
+  ]
+  @UI.identification: [
+    {
+      position: 30,
+      label: 'Tipo'
+    }
+  ]
+  Tipo;
+
+
+  @UI.lineItem: [
+    {
+      position: 40,
+      label: 'Reino'
+    }
+  ]
+  @UI.identification: [
+    {
+      position: 40,
+      label: 'Reino'
+    }
+  ]
+  Reino;
+
+
+  @UI.lineItem: [
+    {
+      position: 50,
+      label: 'Color'
+    }
+  ]
+  @UI.identification: [
+    {
+      position: 50,
+      label: 'Color'
+    }
+  ]
+  Color;
+
+
+  @UI.lineItem: [
+    {
+      position: 60,
+      label: 'Poder'
+    }
+  ]
+  @UI.identification: [
+    {
+      position: 60,
+      label: 'Poder'
+    }
+  ]
+  Poder;
+
+
+  @UI.lineItem: [
+    {
+      position: 70,
+      label: 'Vidas'
+    }
+  ]
+  @UI.identification: [
+    {
+      position: 70,
+      label: 'Vidas'
+    }
+  ]
+  Vidas;
+
+
+  @UI.lineItem: [
+    {
+      position: 80,
+      label: 'Monedas'
+    }
+  ]
+  @UI.identification: [
+    {
+      position: 80,
+      label: 'Monedas'
+    }
+  ]
+  Monedas;
+
+
+  @UI.lineItem: [
+    {
+      position: 90,
+      label: 'Nivel'
+    }
+  ]
+  @UI.identification: [
+    {
+      position: 90,
+      label: 'Nivel'
+    }
+  ]
+  Nivel;
+
+
+  @UI.lineItem: [
+    {
+      position: 100,
+      label: 'Estado'
+    }
+  ]
+  @UI.identification: [
+    {
+      position: 100,
+      label: 'Estado'
+    }
+  ]
+  Estado;
+
+
+  @UI.lineItem: [
+    {
+      position: 110,
+      label: 'Fecha de alta'
+    }
+  ]
+  @UI.identification: [
+    {
+      position: 110,
+      label: 'Fecha de alta'
+    }
+  ]
+  FechaAlta;
+
+
+  @UI.hidden: true
+  CreatedBy;
+
+
+  @UI.hidden: true
+  CreatedAt;
+
+
+  @UI.hidden: true
+  LastChangedBy;
+
+
+  @UI.hidden: true
+  LastChangedAt;
+
+}

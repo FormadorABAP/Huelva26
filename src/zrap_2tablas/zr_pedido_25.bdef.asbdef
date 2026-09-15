@@ -1,0 +1,83 @@
+managed implementation in class zbp_i_pedido_25 unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZR_PEDIDO_25 alias Pedido
+persistent table zpedido_25
+draft table zpedido_d_25
+lock master total etag LastChangedAt
+authorization master ( none )
+etag master LocalLastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  field ( numbering : managed, readonly ) PedidoId;
+
+  field ( readonly )
+    CreatedBy,
+    CreatedAt,
+    LastChangedBy,
+    LastChangedAt,
+    LocalLastChangedAt;
+
+  association _Posiciones { create; with draft; }
+
+  mapping for zpedido_25
+  {
+    PedidoId            = pedido_id;
+    Cliente             = cliente;
+    FechaPedido         = fecha_pedido;
+    Estado              = estado;
+    CreatedBy           = created_by;
+    CreatedAt           = created_at;
+    LastChangedBy       = last_changed_by;
+    LastChangedAt       = last_changed_at;
+    LocalLastChangedAt  = local_last_changed_at;
+  }
+}
+
+define behavior for ZR_PEDIDO_POS_25 alias Posicion
+persistent table zpedido_pos_25
+draft table zpedido_pos_d_25
+lock dependent by _Pedido
+authorization dependent by _Pedido
+etag master LocalLastChangedAt
+{
+  update;
+  delete;
+
+  field ( numbering : managed, readonly ) PosId;
+
+  field ( readonly )
+    PedidoId,
+    CreatedBy,
+    CreatedAt,
+    LastChangedBy,
+    LastChangedAt,
+    LocalLastChangedAt;
+
+  association _Pedido { with draft; }
+
+  mapping for zpedido_pos_25
+  {
+    PosId               = pos_id;
+    PedidoId            = pedido_id;
+    Producto            = producto;
+    Cantidad            = cantidad;
+    PrecioUnit          = precio_unit;
+    Moneda              = moneda;
+    CreatedBy           = created_by;
+    CreatedAt           = created_at;
+    LastChangedBy       = last_changed_by;
+    LastChangedAt       = last_changed_at;
+    LocalLastChangedAt  = local_last_changed_at;
+  }
+}

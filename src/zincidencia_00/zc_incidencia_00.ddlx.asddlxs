@@ -1,0 +1,245 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Titulo'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'IdIncidencia'
+
+@UI.presentationVariant: [{
+  sortOrder: [
+    {
+      by: 'Prioridad',
+      direction: #ASC
+    },
+    {
+      by: 'FechaLimite',
+      direction: #ASC
+    }
+  ]
+}]
+annotate view ZC_INCIDENCIA_00 with
+{
+  @UI.facet: [ {
+    label: 'Informacion General',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #IDENTIFICATION_REFERENCE
+  } , {
+    label: 'Fechas',
+    id: 'Fechas',
+    purpose: #STANDARD,
+    position: 20 ,
+    type: #FIELDGROUP_REFERENCE ,
+    targetQualifier: 'Fechas'
+  }]
+
+  @EndUserText.label: 'Identificador de Incidencia'
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Identificador de Incidencia'
+  } , {
+  //    position: 100,
+    type: #FOR_ACTION,
+    dataAction: 'CerrarIncidencia',
+    label: 'Cerrar incidencia'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    label: 'Identificador de Incidencia'
+  } , {
+    position: 100,
+    type: #FOR_ACTION,
+    dataAction: 'CerrarIncidencia',
+    label: 'Cerrar incidencia'
+  }]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  IdIncidencia;
+
+  @EndUserText.label: 'Título'
+  @UI.identification: [ {
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 20
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  Titulo;
+
+  @EndUserText.label: 'Descripción'
+  @UI.identification: [ {
+    position: 30
+  } ]
+  //  @UI.lineItem: [ {
+  //    position: 30 ,
+  //    label: 'Descripcion'
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 30
+  //  } ]
+  Descripcion;
+
+  @EndUserText.label: 'Categoría'
+  @UI.identification: [ {
+    position: 40
+  } ]
+  @UI.lineItem: [ {
+    position: 40
+  } ]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+  Categoria;
+
+  @UI.lineItem: [ {
+  position: 50,
+  criticality: 'PrioridadCriticality',
+  criticalityRepresentation: #WITHOUT_ICON
+  } ]
+
+  @UI.identification: [ {
+    position: 50,
+    criticality: 'PrioridadCriticality',
+    criticalityRepresentation: #WITHOUT_ICON
+  } ]
+
+  @UI.selectionField: [ {
+    position: 50
+  } ]
+
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+      name: 'ZI_PRIORIDAD_VH_00',
+      element: 'Prioridad'
+    }
+  }]
+  
+  @UI.textArrangement: #TEXT_ONLY
+  Prioridad;
+
+  @UI.identification: [ {
+    position: 60
+  } ]
+  @UI.lineItem: [ {
+    position: 60
+  } ]
+  @UI.selectionField: [ {
+    position: 60
+  } ]
+  @Consumption.valueHelpDefinition: [{
+      entity: {
+          name: 'ZI_ESTADO_VH_00',
+          element: 'Estado'
+      }
+  }]
+  Estado;
+
+  @EndUserText.label: 'Responsable'
+  @UI.identification: [ {
+    position: 70
+  } ]
+  @UI.lineItem: [ {
+    position: 70
+  } ]
+  @UI.selectionField: [ {
+    position: 70
+  } ]
+  Responsable;
+
+  @EndUserText.label: 'Fecha Alta'
+  //  @UI.identification: [ {
+  //    position: 80 ,
+  //    label: 'FechaAlta'
+  //  } ]
+  //  @UI.lineItem: [ {
+  //    position: 80 ,
+  //    label: 'FechaAlta'
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 80
+  //  } ]
+  @UI.fieldGroup: [{
+  position: 10 ,
+  qualifier: 'Fechas' }]
+  FechaAlta;
+
+  @EndUserText.label: 'Fecha Limite'
+  //  @UI.identification: [ {
+  //    position: 90 ,
+  //    label: 'FechaLimite'
+  //  } ]
+  @UI.lineItem: [ {
+    position: 90
+  } ]
+  //  @UI.selectionField: [ {
+  //    position: 90
+  //  } ]
+  @UI.fieldGroup: [{
+  position: 20 ,
+  qualifier: 'Fechas' }]
+  FechaLimite;
+
+  @EndUserText.label: 'Fecha Cierre'
+  //  @UI.identification: [ {
+  //    position: 100 ,
+  //    label: 'FechaCierre'
+  //  } ]
+  //  @UI.lineItem: [ {
+  //    position: 100 ,
+  //    label: 'FechaCierre'
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 100
+  //  } ]
+  @UI.fieldGroup: [{
+  position: 30 ,
+  qualifier: 'Fechas' }]
+  FechaCierre;
+
+  //  @UI.identification: [ {
+  //    position: 110
+  //  } ]
+  //  @UI.lineItem: [ {
+  //    position: 110
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 110
+  //  } ]
+  //  CreatedBy;
+  //
+  //  @UI.identification: [ {
+  //    position: 120
+  //  } ]
+  //  @UI.lineItem: [ {
+  //    position: 120
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 120
+  //  } ]
+  //  LastChangedBy;
+  //
+  //  @UI.identification: [ {
+  //    position: 130
+  //  } ]
+  //  @UI.lineItem: [ {
+  //    position: 130
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 130
+  //  } ]
+  //  LastChangedAt;
+  //
+  //  @UI.identification: [ {
+  //    position: 140
+  //  } ]
+  //  @UI.lineItem: [ {
+  //    position: 140
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 140
+  //  } ]
+  //  LocalLastChangedAt;
+}

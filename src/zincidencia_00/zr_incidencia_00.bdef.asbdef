@@ -1,0 +1,65 @@
+managed implementation in class ZBP_R_INCIDENCIA_00 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_INCIDENCIA_00 alias ZrIncidencia00
+persistent table zincidencia_00
+extensible
+draft table zincidencia_00_d
+etag master LastChangedAt
+lock master total etag LocalLastChangedAt
+authorization master ( global )
+early numbering
+{
+  field ( mandatory : create )
+  Titulo;
+
+  field ( readonly )
+  IdIncidencia,
+  FechaCierre,
+  PrioridadCriticality,
+  CreatedBy,
+  LastChangedBy,
+  LastChangedAt,
+  LocalLastChangedAt;
+
+  field ( readonly : update )
+  Titulo;
+
+  create;
+  update;
+  delete;
+
+  determination InicializarIncidencia on modify
+  {
+    create;
+  }
+
+    action CerrarIncidencia result [1] $self;
+
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for zincidencia_00 corresponding extensible
+    {
+      IdIncidencia       = ID_INCIDENCIA;
+      Titulo             = TITULO;
+      Descripcion        = DESCRIPCION;
+      Categoria          = CATEGORIA;
+      Prioridad          = PRIORIDAD;
+      Estado             = ESTADO;
+      Responsable        = RESPONSABLE;
+      FechaAlta          = FECHA_ALTA;
+      FechaLimite        = FECHA_LIMITE;
+      FechaCierre        = FECHA_CIERRE;
+      CreatedBy          = CREATED_BY;
+      LastChangedBy      = LAST_CHANGED_BY;
+      LastChangedAt      = LAST_CHANGED_AT;
+      LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    }
+
+}

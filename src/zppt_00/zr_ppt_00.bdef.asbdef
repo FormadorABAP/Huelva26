@@ -1,0 +1,67 @@
+managed implementation in class ZBP_R_PPT_00 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_PPT_00 alias ZrPpt00
+persistent table zppt_00
+extensible
+draft table zppt_00_d
+etag master LastChangedAt
+lock master total etag LocalLastChangedAt
+authorization master ( global )
+early numbering // para inicializar el número de la partida :)
+{
+  //  field ( mandatory : create )
+  //   NumPartida;
+
+  field ( readonly )
+  NumPartida,
+  Ganador,
+  CreatedBy,
+  LastChangedBy,
+  LastChangedAt,
+  LocalLastChangedAt;
+
+  //  field ( readonly : update )
+  //   NumPartida;
+
+  create;
+  update;
+  delete;
+
+  determination Calcular_Ganador on modify
+  {
+    create;
+    field Jugada1, Jugada2, Nombre1, Nombre2;
+  }
+
+  side effects
+  {
+    field Jugada1 affects field Ganador;
+    field Jugada2 affects field Ganador;
+    field Nombre1 affects field Ganador;
+    field Nombre2 affects field Ganador;
+  }
+  //  action Calcular_Ganador2 result [1] $self;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for zppt_00 corresponding extensible
+    {
+      NumPartida         = NUM_PARTIDA;
+      Nombre1            = NOMBRE_1;
+      Jugada1            = JUGADA_1;
+      Nombre2            = NOMBRE_2;
+      Jugada2            = JUGADA_2;
+      Ganador            = GANADOR;
+      CreatedBy          = CREATED_BY;
+      LastChangedBy      = LAST_CHANGED_BY;
+      LastChangedAt      = LAST_CHANGED_AT;
+      LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    }
+
+}

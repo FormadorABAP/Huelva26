@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZVELAS_00</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Velas</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZVELAS_00</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>La intensidad del aroma es demasiado alta</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZVELAS_00</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>La intensidad del aroma no puede ser negativa</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZVELAS_00</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>La intensidad del aroma no puede ser negativa</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZVELAS_00</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Vela configurada con intensidad</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZVELAS_00</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>La intensidad del aroma es demasiado alta (máximo 10)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZVELAS_00</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>La intensidad del aroma no puede ser negativa</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZVELAS_00</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Vela configurada con intensidad &amp;1</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

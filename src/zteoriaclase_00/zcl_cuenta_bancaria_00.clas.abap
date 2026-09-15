@@ -12,6 +12,12 @@ CLASS zcl_cuenta_bancaria_00 DEFINITION
       IMPORTING
         iv_importe TYPE zdecimals2.
 
+    METHODS retirar
+      IMPORTING
+        iv_importe TYPE zdecimals2
+      RAISING
+        zcx_saldo_insuficiente.
+
     METHODS consultar_saldo
       RETURNING VALUE(rv_saldo) TYPE zdecimals2.
 
@@ -30,9 +36,7 @@ CLASS zcl_cuenta_bancaria_00 DEFINITION
 ENDCLASS.
 
 
-
-CLASS ZCL_CUENTA_BANCARIA_00 IMPLEMENTATION.
-
+CLASS zcl_cuenta_bancaria_00 IMPLEMENTATION.
 
   METHOD constructor.
     titular = iv_titular.
@@ -40,22 +44,18 @@ CLASS ZCL_CUENTA_BANCARIA_00 IMPLEMENTATION.
     numero_operaciones_internas = 0.
   ENDMETHOD.
 
-
   METHOD ingresar.
     saldo = saldo + iv_importe.
     registrar_operacion_interna( ).
   ENDMETHOD.
 
-
   METHOD consultar_saldo.
     rv_saldo = saldo.
   ENDMETHOD.
 
-
   METHOD consultar_operaciones.
     rv_operaciones = numero_operaciones_internas.
   ENDMETHOD.
-
 
   METHOD registrar_operacion_interna.
     numero_operaciones_internas = numero_operaciones_internas + 1.
@@ -63,4 +63,12 @@ CLASS ZCL_CUENTA_BANCARIA_00 IMPLEMENTATION.
       "" aquí, por ejemplo, se lanzaría la auditoría automática
     ENDIF.
   ENDMETHOD.
+
+  METHOD retirar.
+    IF iv_importe > saldo.
+      RAISE EXCEPTION TYPE zcx_saldo_insuficiente.
+    ENDIF.
+    saldo = saldo - iv_importe.
+  ENDMETHOD.
+
 ENDCLASS.

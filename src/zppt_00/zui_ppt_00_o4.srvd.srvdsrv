@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_PPT_00'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_PPT_00'
+  }
+}
+define service ZUI_PPT_00_O4 provider contracts odata_v4_ui {
+  expose ZC_PPT_00;
+}

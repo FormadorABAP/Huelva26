@@ -12,8 +12,7 @@ ENDCLASS.
 
 
 
-CLASS ZCL_TEST_MAQUINA_CHICLES_00 IMPLEMENTATION.
-
+CLASS zcl_test_maquina_chicles_00 IMPLEMENTATION.
 
   METHOD if_oo_adt_classrun~main.
 

@@ -21,21 +21,18 @@ ENDCLASS.
 
 
 
-CLASS ZCL_INSTRUMENTO_00 IMPLEMENTATION.
-
-
+CLASS zcl_instrumento_00 IMPLEMENTATION.
   METHOD constructor.
     marca = i_marca.
     horas_uso = 0.
   ENDMETHOD.
 
-
   METHOD registrar_practica.
     horas_uso += i_horas.
   ENDMETHOD.
 
-
   METHOD consultar_horas_uso.
     rv_horas = horas_uso.
   ENDMETHOD.
+
 ENDCLASS.

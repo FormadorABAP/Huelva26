@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_Z1717TRAVEL'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_Z1717TRAVEL'
+  }
+}
+define service ZUI_Z1717TRAVEL_O4 provider contracts odata_v4_ui {
+  expose ZC_Z1717TRAVEL;
+}

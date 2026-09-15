@@ -62,11 +62,5 @@ CLASS zcl_test_chiringuitos_00 IMPLEMENTATION.
     lv_comision = lo_alq_ham->calcular_comision(  ).
     out->write( |La comisión es { lv_comision }| ).
 
-    lo_chi_beb->anadir_hielo( ).
-*    lo_alq_ham->anadir_hielo( ).
-
-*    lo_chi_beb->reservar_sombrilla( 2 ).
-    lo_alq_ham->reservar_sombrilla( 2 ).
-
   ENDMETHOD.
 ENDCLASS.

@@ -1,0 +1,5 @@
+@EndUserText.label: 'Servicio de pedidos'
+define service ZUI_PEDIDO_25 {
+  expose ZC_PEDIDO_25     as Pedidos;
+  expose ZC_PEDIDO_POS_25 as Posiciones;
+}

@@ -20,9 +20,7 @@ ENDCLASS.
 
 
 
-CLASS ZCL_GUITARRA_00 IMPLEMENTATION.
-
-
+CLASS zcl_guitarra_00 IMPLEMENTATION.
   METHOD constructor.
 
     super->constructor( i_marca = i_marca ).
@@ -30,11 +28,11 @@ CLASS ZCL_GUITARRA_00 IMPLEMENTATION.
 
   ENDMETHOD.
 
-
   METHOD afinar_cuerda.
     rv_afinado = abap_false.
     IF i_cuerda > 0 AND i_cuerda <= num_cuerdas.
       rv_afinado = abap_true.
     ENDIF.
   ENDMETHOD.
+
 ENDCLASS.

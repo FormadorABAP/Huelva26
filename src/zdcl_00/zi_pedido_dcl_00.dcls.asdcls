@@ -1,0 +1,14 @@
+@EndUserText.label: 'Control de acceso por zona'
+@MappingRole: true
+
+define role ZI_PEDIDO_DCL_00
+{
+  grant select on ZI_PEDIDO_DCL_00
+    where
+      ( Zona ) =
+        aspect pfcg_auth(
+          ZPEDAREA00,
+          ZZONA00,
+          ACTVT = '03'
+        );
+}

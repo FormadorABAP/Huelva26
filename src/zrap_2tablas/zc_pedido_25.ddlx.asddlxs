@@ -1,0 +1,33 @@
+@Metadata.layer: #CORE
+annotate entity ZC_PEDIDO_25 with
+{
+  @UI.facet: [
+    {
+      id: 'Pedido',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Datos del pedido',
+      position: 10
+    },
+    {
+      id: 'Posiciones',
+      purpose: #STANDARD,
+      type: #LINEITEM_REFERENCE,
+      label: 'Posiciones',
+      position: 20,
+      targetElement: '_Posiciones'
+    }
+  ]
+
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  Cliente;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  FechaPedido;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  Estado;
+}

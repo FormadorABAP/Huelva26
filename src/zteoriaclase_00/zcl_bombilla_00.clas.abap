@@ -15,23 +15,20 @@ CLASS zcl_bombilla_00 DEFINITION PUBLIC FINAL CREATE PUBLIC.
 ENDCLASS.
 
 
-
-CLASS ZCL_BOMBILLA_00 IMPLEMENTATION.
-
+CLASS zcl_bombilla_00 IMPLEMENTATION.
 
   METHOD encender.
     esta_encendida = abap_true.
   ENDMETHOD.
-
 
   METHOD get_encendida.
     " Parámetro = Atributo
     rv_encedida = esta_encendida.
   ENDMETHOD.
 
-
   METHOD constructor. " Un método SET
     " Atributo = parametro
     potencia = i_potencia.
   ENDMETHOD.
+
 ENDCLASS.

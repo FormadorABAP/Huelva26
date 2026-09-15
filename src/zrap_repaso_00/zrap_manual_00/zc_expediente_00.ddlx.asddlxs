@@ -1,0 +1,45 @@
+@Metadata.layer: #CORE
+
+annotate entity ZC_EXPEDIENTE_00 with
+{
+  @UI.facet: [
+    {
+      id: 'Expediente',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Datos del expediente',
+      position: 10
+    }
+  ]
+  @EndUserText.label: 'Expediente'
+  @UI.lineItem: [{ position: 10, label: 'Expediente' }]
+  @UI.identification: [{ position: 10, label: 'Expediente' }]
+  IdExpediente;
+
+  @UI.lineItem: [{ position: 20, label: 'Cliente' }]
+  @UI.identification: [{ position: 20, label: 'Cliente' }]
+  Cliente;
+
+  @UI.lineItem: [{ position: 30, label: 'Tipo de asunto' }]
+  @UI.identification: [{ position: 30, label: 'Tipo de asunto' }]
+  TipoAsunto;
+
+  @UI.lineItem: [{ position: 40, label: 'Abogado' }]
+  @UI.identification: [{ position: 40, label: 'Abogado' }]
+  Abogado;
+
+  @UI.lineItem: [{ position: 50, label: 'Estado' }]
+  @UI.identification: [{ position: 50, label: 'Estado' }]
+  Estado;
+
+  @UI.lineItem: [{ position: 60, label: 'Fecha apertura' }]
+  @UI.identification: [{ position: 60, label: 'Fecha apertura' }]
+  FechaApertura;
+
+  @UI.lineItem: [{ position: 70, label: 'Fecha cierre' }]
+  @UI.identification: [{ position: 70, label: 'Fecha cierre' }]
+  FechaCierre;
+
+  @UI.identification: [{ position: 80, label: 'Descripción' }]
+  Descripcion;
+}

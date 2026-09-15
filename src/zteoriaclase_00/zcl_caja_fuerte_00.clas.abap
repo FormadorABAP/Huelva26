@@ -20,17 +20,13 @@ CLASS zcl_caja_fuerte_00 DEFINITION
       bloqueada TYPE abap_bool.
 ENDCLASS.
 
-
-
-CLASS ZCL_CAJA_FUERTE_00 IMPLEMENTATION.
-
+CLASS zcl_caja_fuerte_00 IMPLEMENTATION.
 
   METHOD constructor.
     codigo = i_codigo.
     intentos = 0.
     bloqueada = abap_false.
   ENDMETHOD.
-
 
   METHOD abrir.
 
@@ -51,8 +47,8 @@ CLASS ZCL_CAJA_FUERTE_00 IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
-
   METHOD esta_bloqueada.
     rv_bloqueada = bloqueada.
   ENDMETHOD.
+
 ENDCLASS.

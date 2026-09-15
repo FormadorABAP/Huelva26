@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZMSG_PRODUCTO_00</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Mensajes de Productos</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMSG_PRODUCTO_00</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>El nombre del producto no puede estar vacío</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMSG_PRODUCTO_00</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>El precio no puede ser negativo</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMSG_PRODUCTO_00</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>No hay stock suficiente</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMSG_PRODUCTO_00</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Producto dado de alta correctamente</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

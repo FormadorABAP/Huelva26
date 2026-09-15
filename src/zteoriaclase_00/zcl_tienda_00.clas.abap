@@ -17,11 +17,10 @@ ENDCLASS.
 
 
 
-CLASS ZCL_TIENDA_00 IMPLEMENTATION.
-
-
+CLASS zcl_tienda_00 IMPLEMENTATION.
   METHOD vender_producto.
     rv_total = i_precio_unidad * i_cantidad.
     o_iva = rv_total * '0.21'.
   ENDMETHOD.
+
 ENDCLASS.

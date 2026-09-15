@@ -35,9 +35,7 @@ ENDCLASS.
 
 
 
-CLASS ZCL_ASCENSOR_00 IMPLEMENTATION.
-
-
+CLASS zcl_ascensor_00 IMPLEMENTATION.
   METHOD constructor.
     planta_actual = 0.
     planta_maxima = i_planta_maxima.
@@ -45,7 +43,6 @@ CLASS ZCL_ASCENSOR_00 IMPLEMENTATION.
     peso_actual = 0.
     bloqueado = abap_false.
   ENDMETHOD.
-
 
   METHOD entrar_peso.
 
@@ -63,12 +60,10 @@ CLASS ZCL_ASCENSOR_00 IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
-
   METHOD vaciar.
     peso_actual = 0.
     bloqueado = abap_false.
   ENDMETHOD.
-
 
   METHOD subir_a_planta.
     IF bloqueado = abap_false.
@@ -85,10 +80,10 @@ CLASS ZCL_ASCENSOR_00 IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
-
   METHOD consultar_estado.
     o_planta_actual = planta_actual.
     o_peso_actual = peso_actual.
     o_bloqueado = bloqueado.
   ENDMETHOD.
+
 ENDCLASS.

@@ -1,0 +1,12 @@
+@EndUserText.label: 'Task 6'
+@MappingRole: true
+define role Z1717_AGENCY {
+    grant select on Z1717_AGENCY
+    where
+      ( agencyid ) = aspect pfcg_auth(
+        /LRN/AGCY,
+        /LRN/AGCY,
+        ACTVT = '03'
+      );
+                        
+}

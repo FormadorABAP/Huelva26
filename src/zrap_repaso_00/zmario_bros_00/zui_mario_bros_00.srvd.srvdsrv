@@ -1,0 +1,4 @@
+@EndUserText.label: 'Mario Bros'
+define service ZUI_mario_bros_00 {
+  expose zc_mario_bros_00;
+}

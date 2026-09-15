@@ -333,16 +333,5 @@ CLASS zcampeones_00 IMPLEMENTATION.
     ENDIF.
 
 
-    SELECT FROM zcds_clientes_productos_00
-        FIELDS *
-        INTO TABLE @DATA(lt_cliped_00).
-
-    IF sy-subrc = 0.
-      LOOP AT lt_cliped_00 ASSIGNING FIELD-SYMBOL(<fs_cliped_00>).
-        <fs_cliped_00>-importe = <fs_cliped_00>-importe * '1.1'.
-
-      ENDLOOP.
-    ENDIF.
-
   ENDMETHOD.
 ENDCLASS.

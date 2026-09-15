@@ -32,16 +32,13 @@ ENDCLASS.
 
 
 
-CLASS ZCL_DRON_00 IMPLEMENTATION.
-
-
+CLASS zcl_dron_00 IMPLEMENTATION.
   METHOD constructor.
     carga_maxima = i_carga_max.
     bateria = 100.
     carga_actual = 0.
     modo_reserva = abap_false.
   ENDMETHOD.
-
 
   METHOD recoger_paquete.
 
@@ -55,7 +52,6 @@ CLASS ZCL_DRON_00 IMPLEMENTATION.
     ENDIF.
 
   ENDMETHOD.
-
 
   METHOD volar_a_cliente.
 
@@ -88,16 +84,15 @@ CLASS ZCL_DRON_00 IMPLEMENTATION.
 
   ENDMETHOD.
 
-
   METHOD recargar.
     bateria = 100.
     modo_reserva = abap_false.
   ENDMETHOD.
-
 
   METHOD consultar_estado.
     o_bateria = bateria.
     o_carga_actual = carga_actual.
     o_modo_reserva = modo_reserva.
   ENDMETHOD.
+
 ENDCLASS.

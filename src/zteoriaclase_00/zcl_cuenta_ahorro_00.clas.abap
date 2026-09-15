@@ -18,18 +18,16 @@ CLASS zcl_cuenta_ahorro_00 DEFINITION
 ENDCLASS.
 
 
-
-CLASS ZCL_CUENTA_AHORRO_00 IMPLEMENTATION.
-
+CLASS zcl_cuenta_ahorro_00 IMPLEMENTATION.
 
   METHOD constructor.
     super->constructor( iv_titular = iv_titular ).
     interes = iv_interes.
   ENDMETHOD.
 
-
   METHOD aplicar_interes.
     "" la hija SÍ puede tocar 'saldo' porque es PROTECTED, heredado del padre
     saldo = saldo + ( saldo * interes / 100 ).
   ENDMETHOD.
+
 ENDCLASS.

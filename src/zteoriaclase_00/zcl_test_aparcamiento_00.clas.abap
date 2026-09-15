@@ -9,11 +9,7 @@ CLASS zcl_test_aparcamiento_00 DEFINITION
   PRIVATE SECTION.
 ENDCLASS.
 
-
-
-CLASS ZCL_TEST_APARCAMIENTO_00 IMPLEMENTATION.
-
-
+CLASS zcl_test_aparcamiento_00 IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
     DATA(lo_aparcamiento) = NEW zcl_aparcamiento_00( ).
     DATA lv_minutos TYPE i.
@@ -24,4 +20,5 @@ CLASS ZCL_TEST_APARCAMIENTO_00 IMPLEMENTATION.
 
     out->write( |Se ha estaciado { lv_minutos } minutos y nos ha costado { lv_total }€| ).
   ENDMETHOD.
+
 ENDCLASS.

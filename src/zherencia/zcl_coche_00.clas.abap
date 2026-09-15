@@ -20,13 +20,10 @@ ENDCLASS.
 
 
 
-CLASS ZCL_COCHE_00 IMPLEMENTATION.
-
-
+CLASS zcl_coche_00 IMPLEMENTATION.
   METHOD abrir_maletero.
 
   ENDMETHOD.
-
 
   METHOD constructor.
 
@@ -35,7 +32,6 @@ CLASS ZCL_COCHE_00 IMPLEMENTATION.
     num_puertas = i_num_puertas.
 
   ENDMETHOD.
-
 
   METHOD pasar_revision.
     rv_revision = abap_false.
@@ -51,4 +47,5 @@ CLASS ZCL_COCHE_00 IMPLEMENTATION.
     ENDIF.
 
   ENDMETHOD.
+
 ENDCLASS.

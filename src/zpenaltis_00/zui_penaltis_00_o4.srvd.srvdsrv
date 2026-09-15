@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_PENALTIS_00'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_PENALTIS_00'
+  }
+}
+define service ZUI_PENALTIS_00_O4 provider contracts odata_v4_ui {
+  expose ZC_PENALTIS_00;
+}

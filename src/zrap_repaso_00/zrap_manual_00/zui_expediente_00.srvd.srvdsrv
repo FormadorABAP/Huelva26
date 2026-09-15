@@ -1,0 +1,4 @@
+@EndUserText.label: 'Expediente'
+define service ZUI_EXPEDIENTE_00 {
+  expose ZC_EXPEDIENTE_00 as Expediente;
+}

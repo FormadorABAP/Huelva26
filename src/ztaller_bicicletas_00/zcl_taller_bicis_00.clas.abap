@@ -29,11 +29,7 @@ CLASS zcl_taller_bicis_00 DEFINITION
   PRIVATE SECTION.
 ENDCLASS.
 
-
-
-CLASS ZCL_TALLER_BICIS_00 IMPLEMENTATION.
-
-
+CLASS zcl_taller_bicis_00 IMPLEMENTATION.
   METHOD registrar_reparacion.
 
     " Recupero el id máximo y le sumo 1
@@ -59,7 +55,6 @@ CLASS ZCL_TALLER_BICIS_00 IMPLEMENTATION.
 
   ENDMETHOD.
 
-
   METHOD consultar_reparacion.
     SELECT SINGLE FROM ztaller_bici_00
         FIELDS *
@@ -72,7 +67,6 @@ CLASS ZCL_TALLER_BICIS_00 IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
-
   METHOD cambiar_estado.
     UPDATE ztaller_bici_00 SET estado = @i_estado
         WHERE id_reparacion = @i_reparacion.
@@ -84,7 +78,6 @@ CLASS ZCL_TALLER_BICIS_00 IMPLEMENTATION.
 
   ENDMETHOD.
 
-
   METHOD eliminar_reparacion.
     DELETE FROM ztaller_bici_00 WHERE id_reparacion = @i_reparacion.
     IF sy-subrc = 0.
@@ -93,4 +86,5 @@ CLASS ZCL_TALLER_BICIS_00 IMPLEMENTATION.
       rv_reparacion = abap_false.
     ENDIF.
   ENDMETHOD.
+
 ENDCLASS.

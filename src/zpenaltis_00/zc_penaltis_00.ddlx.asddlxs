@@ -1,0 +1,119 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'NumeroLanzamiento'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'NumeroLanzamiento'
+annotate view ZC_PENALTIS_00 with
+{
+  @UI.facet: [ {
+    label: 'General Information',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @EndUserText.label: 'NumeroLanzamiento'
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'NumeroLanzamiento'
+  } , {
+  //    position: 100,
+    type: #FOR_ACTION,
+    dataAction: 'lanzar_penaltis',
+    label: 'Lanzar Penaltis'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    label: 'NumeroLanzamiento'
+  } , {
+  //    position: 100,
+    type: #FOR_ACTION,
+    dataAction: 'lanzar_penaltis',
+    label: 'Lanzar Penaltis'
+  }]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  NumeroLanzamiento;
+
+  @EndUserText.label: 'Lanzador'
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'Lanzador'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 ,
+    label: 'Lanzador'
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  Lanzador;
+
+  @UI.identification: [ {
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 30
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+      name: 'ZI_DIRECCION_VH_00',
+      element: 'Direccion'
+    }
+  }]
+  DirDisparo;
+
+  @EndUserText.label: 'Portero'
+  @UI.identification: [ {
+    position: 40 ,
+    label: 'Portero'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 ,
+    label: 'Portero'
+  } ]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+  Portero;
+
+  @UI.identification: [ {
+    position: 50
+  } ]
+  @UI.lineItem: [ {
+    position: 50
+  } ]
+  @UI.selectionField: [ {
+    position: 50
+  } ]
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+      name: 'ZI_DIRECCION_VH_00',
+      element: 'Direccion'
+    }
+  }]
+  DirPortero;
+
+  @EndUserText.label: 'Resultado'
+  @UI.identification: [ {
+    position: 60 ,
+    criticality: 'Color',
+    criticalityRepresentation: #WITHOUT_ICON ,
+    label: 'Resultado'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 ,
+    criticality: 'Color',
+    criticalityRepresentation: #WITHOUT_ICON ,    
+    label: 'Resultado'
+  } ]
+  @UI.selectionField: [ {
+    position: 60
+  } ]
+  Resultado;
+
+}

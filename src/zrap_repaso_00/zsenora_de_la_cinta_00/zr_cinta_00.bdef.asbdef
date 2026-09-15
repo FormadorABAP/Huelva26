@@ -1,0 +1,49 @@
+managed implementation in class ZBP_R_CINTA_00 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_CINTA_00 alias ZrCinta00
+persistent table ZCINTA_00
+extensible
+draft table ZCINTA_00_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   IdOfrenda;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   IdOfrenda;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZCINTA_00 corresponding extensible
+  {
+    IdOfrenda = ID_OFRENDA;
+    Nombre = NOMBRE;
+    TipoOfrenda = TIPO_OFRENDA;
+    FechaOfrenda = FECHA_OFRENDA;
+    Mensaje = MENSAJE;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+}

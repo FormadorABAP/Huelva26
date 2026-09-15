@@ -19,11 +19,7 @@ CLASS zcl_mascota_00 DEFINITION
 
 ENDCLASS.
 
-
-
-CLASS ZCL_MASCOTA_00 IMPLEMENTATION.
-
-
+CLASS zcl_mascota_00 IMPLEMENTATION.
   METHOD constructor.
     hambre = 100.
     energia = 100.
@@ -37,7 +33,6 @@ CLASS ZCL_MASCOTA_00 IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
-
   METHOD jugar.
     IF energia >= 20.
       energia -= 15.
@@ -49,9 +44,9 @@ CLASS ZCL_MASCOTA_00 IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
-
   METHOD consultar_estado.
     o_energia = energia.
     o_hambre = hambre.
   ENDMETHOD.
+
 ENDCLASS.

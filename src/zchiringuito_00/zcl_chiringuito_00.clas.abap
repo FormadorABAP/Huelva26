@@ -17,28 +17,22 @@ CLASS zcl_chiringuito_00 DEFINITION
   PRIVATE SECTION.
 ENDCLASS.
 
-
-
-CLASS ZCL_CHIRINGUITO_00 IMPLEMENTATION.
-
-
+CLASS zcl_chiringuito_00 IMPLEMENTATION.
   METHOD vender.
     recaudacion = recaudacion + i_dinero.
   ENDMETHOD.
-
 
   METHOD calcular_comision.
     rv_comision = recaudacion * '0.1'.
   ENDMETHOD.
 
-
   METHOD consultar_recaudacion.
     rv_recaudacion = recaudacion.
   ENDMETHOD.
-
 
   METHOD constructor.
     nombre = i_nombre.
     recaudacion = 0.
   ENDMETHOD.
+
 ENDCLASS.
